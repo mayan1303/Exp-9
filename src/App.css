@@ -1,0 +1,75 @@
+.page-shell {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(109, 179, 242, 0.35), transparent 40%),
+    linear-gradient(135deg, #071f33 0%, #0c3b5b 55%, #136f8a 100%);
+  color: #f4fbff;
+}
+
+.hero-card {
+  width: min(760px, 100%);
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(5, 18, 31, 0.78);
+  border: 1px solid rgba(183, 224, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #7ad7ff;
+  font-size: 0.78rem;
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+.lead {
+  margin: 18px 0 24px;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #d8ecf8;
+}
+
+.env-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.env-grid article {
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(122, 215, 255, 0.08);
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: #8cd8fb;
+  font-size: 0.85rem;
+}
+
+.feature-list {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.8;
+  color: #edf8ff;
+}
+
+@media (max-width: 640px) {
+  .hero-card {
+    padding: 24px;
+  }
+}
