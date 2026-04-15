@@ -75,14 +75,3 @@ jobs:
             REACT_APP_ENVIRONMENT=production
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Slack deployment notification
-        if: github.event_name == 'push' && success()
-        uses: slackapi/slack-github-action@v1.27.0
-        with:
-          payload: |
-            {
-              "text": "Deployment completed for ${{ github.repository }}. Image published to GHCR with tags latest and ${{ github.sha }}."
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
